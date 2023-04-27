@@ -1,0 +1,297 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+}
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#app {
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 0px) {
+li[data-v-1856c98c]:nth-child(1){
+      display: none;
+}
+li[data-v-1856c98c]:nth-child(2){
+      display: none;
+}
+li[data-v-1856c98c]:nth-child(3){
+      display: none;
+}
+}
+@media (min-width: 576px) {
+#main-menu[data-v-1856c98c] { /* use for menu: su kien dang dien ra, gioi thieu...*/
+          height: 60px;
+          line-height: 60px;
+          text-align: right;
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: bold;
+}
+li[data-v-1856c98c]:nth-child(2){ /* hide the second menu item as the screen becomes smaller */
+      display: block;
+}
+li[data-v-1856c98c]:nth-child(3){ /* hide the third menu item as the screen becomes smaller */
+      display: block;
+}
+}
+@media (min-width: 768px) {
+#main-menu[data-v-1856c98c] { /* use for menu: su kien dang dien ra, gioi thieu...*/
+          height: 60px;
+          line-height: 60px;
+          text-align: right;
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: bold;
+}
+li[data-v-1856c98c]:nth-child(1){ /* hide the first menu item as the screen becomes smaller */
+      display: block;
+}
+}
+@media (min-width: 992px) {
+#main-menu[data-v-1856c98c] { /* use for menu: su kien dang dien ra, gioi thieu...*/
+          height: 100px;
+          line-height: 82px;
+          text-align: right;
+          font-size: 20px;
+          text-transform: uppercase;
+          font-weight: bold;
+}
+}
+@media (min-width: 1024px) {
+#app[data-v-1856c98c] {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    padding: 0 2rem;
+}
+}
+
+.modal-mask {
+        position: fixed;
+        z-index: 9998;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: table;
+        transition: opacity 0.3s ease;
+}
+.modal-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+}
+.modal-container {
+        width: 300px;
+        margin: 0px auto;
+        padding: 20px 30px;
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+        transition: all 0.3s ease;
+        font-family: Helvetica, Arial, sans-serif;
+}
+.modal-header h3 {
+        margin-top: 0;
+        color: #42b983;
+}
+.modal-body {
+         margin: 20px 0;
+}
+.modal-default-button {
+         float: right;
+}
+
+    /*
+    * The following styles are auto-applied to elements with
+    * transition="modal" when their visibility is toggled
+    * by Vue.js.
+    *
+    * You can easily play with the modal transition by editing
+    * these styles.
+    */
+.modal-enter {
+       opacity: 0;
+}
+.modal-leave-active {
+      opacity: 0;
+}
+.modal-enter .modal-container,
+    .modal-leave-active .modal-container {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+}
+
+
+#main-container h3[data-v-fdf93645]{
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 10px;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 380px) {
+.raceinfo[data-v-fdf93645]{
+    font-size:  15px;
+}
+}
+@media (min-width: 480px) {
+.raceinfo[data-v-fdf93645]{
+    font-size:  23px;
+}
+}
+@media (min-width: 561px) {
+.raceinfo[data-v-fdf93645]{
+    font-size:  28px;
+}
+}
+.form-control[data-v-fdf93645], .search-form button[data-v-fdf93645] {
+    font-size: 22px;
+    height: 50px !important;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+#bib-search[data-v-f5d31b01]  { 
+  background: url("/assets/anhnenmoi.07684a1c.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: 5px;
+  position: relative;
+  height: 1200px;
+}
+
+/* #bib-search {
+    position: relative;
+     background-image: url("../assets/backgroundrepeat.jpg");
+    background-repeat: repeat; 
+    background-size: 100%;
+    height: 1200px;
+} */
+.search-form[data-v-f5d31b01] {
+    width: 100%;
+    background-color: rgba(200,20,40,.4);
+    padding: 40px 0; 
+    margin-left: 4px;
+}
+.search-form .form-control[data-v-f5d31b01], .search-form button[data-v-f5d31b01] {
+    font-size: 22px;
+    height: 50px !important;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+@media (min-width: 0px) {
+.sologan[data-v-f5d31b01]{
+        padding-left: 60px; 
+        font-size: 15px;
+}
+}
+@media (min-width: 350px) {
+.sologan[data-v-f5d31b01]{
+        padding-left: 85px; 
+        font-size: 15px;
+}
+}
+@media (min-width: 576px) {
+.sologan[data-v-f5d31b01]{
+        padding-left: 110px; 
+        font-size: 24px;
+}
+}
+@media (min-width: 768px) {
+.sologan[data-v-f5d31b01]{
+        padding-left: 150px;
+        font-size: 30px;
+}
+}
+@media (min-width: 992px) {
+.sologan[data-v-f5d31b01]{
+        padding-left: 225px;
+        font-size: 50px;
+}
+}
+@media (min-width: 1200px) {
+.sologan[data-v-f5d31b01]{
+        padding-left: 225px;
+        font-size: 60px;
+}
+}
+@media (min-width: 1400px) {
+.sologan[data-v-f5d31b01]{
+        padding-left: 225px; 
+        font-size: 60px;
+}
+}
