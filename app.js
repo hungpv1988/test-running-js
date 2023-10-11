@@ -10,7 +10,10 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname+'/public'));
 app.use(express.static(__dirname));
-app.use(express.static(path.join(__dirname,'views')));
+app.use(express.static(__dirname+'/dist'));
+//app.use(express.static(path.join(__dirname,'views'))); 
+// to say that default is index02.html. Otherwise, it's index https://stackoverflow.com/questions/33818217/node-js-how-to-make-default-page-to-be-sth-other-than-index-html
+app.use(express.static(path.join(__dirname,'views'), {index: 'index.html'})); 
 app.listen(5001, () => {
     console.log("Application started and Listening on port 5001");
 });

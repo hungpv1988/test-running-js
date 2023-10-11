@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="https://timanh.com/assets/timanhlogo.0e3ef396.png">
+    <link rel="icon" href="https://yourbib-space.sgp1.cdn.digitaloceanspaces.com/assets/ecopark/index.02998f7b.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tìm Ảnh</title>
     <meta property="og:url" content="https://timanh.com">
@@ -59,12 +59,20 @@
     
   </body>
   <script> 
-    function onload() {
+    function appendScript() {
      const script = document.createElement('script');
-     script.onload = () => { console.log('script loaded!'); };
-     script.src = "https://yourbib-space.sgp1.cdn.digitaloceanspaces.com/assets/ecopark/index.1b580881.js?fbclid=IwAR1kXn1ifntumkJeZAJlKmE3qeSJc4RWss-1ortpE6akTkDOoEju3m34ifU";
+     script.onload = () => { console.log('script appended!'); };
+     script.src = "https://timanh-cdn.s3.ap-southeast-1.amazonaws.com/embeded-script/smart-finder-widget.js";
      script.type="module";
      document.head.append(script);
+    }
+    
+    function appendLink() {
+     const link = document.createElement('link');
+     link.onload = () => { console.log('link appended!'); };
+     link.href = "https://timanh-cdn.s3.ap-southeast-1.amazonaws.com/embeded-script/styles.css";
+     link.rel="stylesheet";
+     document.head.append(link);
     }
 
     function addJquery(){
