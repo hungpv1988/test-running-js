@@ -75,6 +75,9 @@
      document.head.append(link);
     }
 
+    appendScript();
+    appendLink();
+
     function addJquery(){
       const scriptTag = document.createElement('script');
       scriptTag.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js";
